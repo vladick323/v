@@ -1,13 +1,16 @@
 import random
 class Human:
-    def __init__(self,name='Human', job=None, home=None, car=None, ):
+    def __init__(self,name='Human', job=None, home=None, car=None, money=None ):
         self.name=name
-        self.money=100
+        self.money=10000
         self.gladness=50
         self.satiety=50
         self.job=job
         self.home=home
         self.car=car
+
+        def get_money(self):
+            pass
     def gey_home(self):
         self.home=House
     def gey_job(self):
@@ -65,12 +68,50 @@ class Human:
         pass
     def to_repair(self):
         pass
-    def days_indexes(self):
-        pass
+    def days_indexes(self,day):
+        day=f"Today the {day} of {self.name}'s life"
+        print(f"{day:=^50}""," "\n")
+        human_indexes=self.name+"s indexes"
+        print(f"{human_indexes:^50}", "\n")
+        print(f"Money - {self.money}")
+        print(f"Saliety - {self.saliety}")
+        print(f"Gladness - {self.gladness}")
+        home_indexes="Home indexes"
+        print(f"{home_indexes:^50}", "\n")
+        print(f"Food - {self.home.food}")
+        print(f"Mess - {self.home.mess}")
+        car_indexes=f"{self.car.brand} car indexes"
+        print(f"{car_indexes:^50}", "\n")
+        print(f"Fuel - {self.car.fuel}")
+        print(f"Strenght - {self.car.strenght}")
     def is_alive(self):
-        pass
-    def live(self):
-        pass
+        if self.gladness<0:
+            print("dipresion")
+            return False
+        elif self.statiety<0:
+            print("golod")
+            return False
+        elif self.money<-500:
+            print("bankrot")
+    def live(self,day):
+        if self.is_alive()==False:
+            return False
+        if self.home is None:
+            print("zaselennya v budinok")
+            self.get_home()
+        if self.car is None:
+            self.get_car()
+            print(f"ya kypiv maxiny {brand_of_car}")
+        if self.job is None:
+            self.get_job
+            print("v mene nema roboti{self.job.job}, z zarplatoyu {self.job.salary}")
+        self.days_indexes(day)
+        dice=random.randint(1,4)
+        if self.satiety<20:
+            print("yisty")
+            self.eat()
+        elif self.gladness<20:
+
 class Auto:
     def __init__(self,brand_list):
         self.brand=random.choice(list(brand_list))
