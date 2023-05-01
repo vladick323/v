@@ -1,6 +1,6 @@
 import random
 class Human:
-    def __init__(self,name='Human', job=None, home=None, car=None, money=None ):
+    def __init__(self,name='Human', job=None, home=None, car=None, money=None, toy=None, ):
         self.name=name
         self.money=10000
         self.gladness=50
@@ -8,7 +8,10 @@ class Human:
         self.job=job
         self.home=home
         self.car=car
+        self.toy=toy
 
+        def get_toy(self):
+            pass
         def get_money(self):
             pass
     def gey_home(self):
@@ -62,8 +65,11 @@ class Human:
             self.satiety+=2
             self.money+=15
 
-    def chill(self):
-        pass
+    def chill(self,toy):
+        if chill<=1:
+            self.shopping.toy
+            self.chill+=10
+
     def clean_home(self):
         pass
     def to_repair(self):
